@@ -1,0 +1,81 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* menu base styles */
+
+nav{
+    background: #333;
+}
+
+nav ul{ 
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    background-color: seagreen;
+}
+
+nav a:hover {
+    background-color: #555;
+    
+}
+
+
+/* flex styles */
+
+/*I added different styles for different screensize, so it's easier to see types of justify-content
+*I also changed the flex: 1 1 0 into 1 1 2 so it's more clear to see how each item in felxbox moves
+*/
+
+/*style 1 -- flex-start*/
+@media screen and (min-width: 800px) {
+    nav ul{ /*container*/
+        display: flex;
+        justify-content:flex-start;
+    }
+    
+    nav li{
+    flex: 1 1 2;
+    }   
+}
+
+/*style 2 -- center*/
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav li{
+    flex: 1 1 2;
+    }
+}
+
+/*style 3 -- space-around*/
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    nav ul{
+        display: flex;
+        justify-content:space-around;
+    }
+    
+    nav li{
+    flex: 1 1 2;
+    }
+}

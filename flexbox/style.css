@@ -1,0 +1,99 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0;
+   
+}
+
+.flex-container {
+    display:flex;
+    background-color: white;
+    flex-wrap: wrap; /*into next row if reach basis width*/
+    flex-flow: row; 
+    justify-content: center;
+    align-items: center;
+    height: 600px; 
+}
+
+.box {
+    height: 100px;
+    min-width: 220px; 
+   /*flex-basis: 800px;*/
+    //flex: 0 0 500px; 
+    //flex: 1 1 0px;
+    /*if min-width, exceeding will show scroll bar for whole elements, if flex with shrink/growth, exceding will auto grow/shrink*/
+    /*but if no shrink/growth, still scroll*/
+    
+}
+
+.one {
+    background: red;
+   
+}
+
+.two {
+    background: blue;
+   
+}
+
+.three {
+    background: green;
+}
+
+/*
+
+/*different screen size with different item postions*/
+
+/*justify-content, align-items, flex shrink/growth are changed to easier see difference*/
+@media screen and (min-width: 800px) {
+    .flex-container {
+    display:flex;
+    background-color: black;
+    flex-wrap: wrap; /*into next row if reach basis width*/
+    flex-flow:row-reverse; /*why colum and column-reverse not show items?*/
+    justify-content:flex-start;
+    align-items:flex-end;
+    height: 600px;
+}
+    .box {
+    height: 100px;
+    //min-width: 740px; 
+   /*flex-basis: 800px;*/
+    //flex: 0 0 500px; 
+    flex: 0 0 50px;
+}
+}
+    
+@media screen and (min-width: 400px) and (max-width: 800px) {
+
+    .flex-container {
+    display:flex;
+    background-color:grey;
+    flex-wrap: wrap; /*into next row if reach basis width*/
+    flex-flow:row; 
+    justify-content:space-around;
+    align-items:baseline;
+    height: 600px;
+}
+    .box {
+    height: 100px;
+    min-width: 440px; 
+   /*flex-basis: 800px;*/
+    //flex: 0 0 500px; 
+    //flex: 0 0 100px;
+}
+    }
+/* element order
+.one(order:0);
+.two(order:10);
+.three(order:-100);
+*/
