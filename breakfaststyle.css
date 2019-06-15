@@ -270,7 +270,7 @@ footer section:last-child {
 
 input{
     z-index: 50;
-    margin: 10px 0 10px 40%;
+    margin: 10px 0 10px 50%;
 }
 
 input:checked+#grid {
