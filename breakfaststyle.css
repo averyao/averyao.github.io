@@ -196,8 +196,8 @@ h1 {
 /*American*/
 #american section {
     
-    margin: 16px 10%;
-    padding: 24px 24px;
+    margin: 16px 5%;
+    padding: 24px 5%;
     background-color: #D1F5FF;
     box-shadow: 1px 1px 5px lightgrey;
     width: 80%;
@@ -206,8 +206,8 @@ h1 {
 /*Chinese*/
 #chinese section {
     
-    margin: 16px 10%;
-    padding: 24px 24px;
+    margin: 16px 5%;
+    padding: 24px 5%;
     background-color: #FFE9D1;
     box-shadow: 1px 1px 5px lightgrey;
     width: 80%;
@@ -216,8 +216,8 @@ h1 {
 /*Japanese*/
 #japanese section {
     
-    margin: 16px 10% 64px 10%;
-    padding: 24px 24px;
+    margin: 16px 5%;
+    padding: 24px 5%;
     background-color: #EBFFD1;
     box-shadow: 1px 1px 5px lightgrey;
     width: 80%;
