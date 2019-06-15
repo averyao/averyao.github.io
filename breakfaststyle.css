@@ -302,7 +302,7 @@ input:checked+#grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 4px;
-    margin: 0 5% 16px;
+    margin: 20px 5% 16px;
 }
 
 .mosaic p{
@@ -331,7 +331,7 @@ input:checked+#grid {
 
 
 
-/*--------------tablet-------------*/
+/*--------------tablet----------------------------*/
 @media screen and (max-width: 768px) and (min-width:600px) {
     
 /*grid*/
