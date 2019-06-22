@@ -1,0 +1,144 @@
+.hero h1 {
+    text-align: center;
+}
+
+body {
+    overflow: scroll;
+}
+
+.cta {
+    display:block;
+    margin: 80px 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+#fade {
+    grid-column: 1/5;
+    height: 300px;
+    background-color: lightgreen;
+    text-align: center;
+    font-weight: 600;
+    color:darkgreen;
+    box-shadow: 1px 1px 1px grey;
+    position: absolute;
+    top: 350px;
+    width: 500px;
+   // animation: fade 1s ease;
+}
+
+#move {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    background: coral;
+    text-align: center;
+    font-weight: 600;
+    color: darkred;
+    box-shadow: 1px 1px 1px grey;
+    transition: transform 2s ease;
+}
+
+#scale1 {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    top: 550px;
+    background-color: lightskyblue;
+    text-align: center;
+    font-weight: 600;
+    color: darkblue;
+    box-shadow: 1px 1px 1px grey;
+   
+}
+
+#rotate{
+     position: absolute;
+    height: 300px;
+    width: 500px;
+    top: 800px;
+    background-color: midnightblue;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    box-shadow: 1px 1px 1px grey;
+    
+    transition: transform 0.5s linear;
+}
+
+#room{
+     position: absolute;
+    height: 300px;
+    width: 500px;
+    top: 1600px;
+    background-color: pink;
+    text-align: center;
+    font-weight: 600;
+    color: saddlebrown;
+    box-shadow: 1px 1px 1px grey;
+    
+}
+
+
+
+/*animation*/
+
+#move:hover {
+    transform:translateX(-1000px);
+}
+
+#fade:hover {
+    animation: fade 3s ease;
+}
+
+#scale1:hover {
+   animation: scaleup 1s linear forwards;
+}
+
+#rotate:hover {
+    transform: rotateY(90deg);
+}
+
+#room:hover {
+    animation: room 5s ease both;
+    transform-origin: top left;
+    -webkit-animation: room 5s ease both;
+    -webkit-transform-origin: top left;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 1;
+        top: 550px;
+    }
+    
+    to {
+        opacity: 0;
+        top: -1000px;
+    }
+}
+
+@keyframes scaleup {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@-webkit-keyframes room {
+	0% { opacity: .3; -webkit-transform: translateX(100%) rotateY(90deg); }
+	50% { -webkit-animation-timing-function: ease-out;  -webkit-transform: translateX(50%) translateZ(-200px) rotateY(45deg); }
+}
+
+@keyframes room {
+    0% { opacity: .3; -webkit-transform: translateX(100%) rotateY(90deg); transform: translateX(100%) rotateY(90deg); }
+	
+    50% { -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out;  -webkit-transform: translateX(50%) translateZ(-200px) rotateY(45deg);  transform: translateX(50%) translateZ(-200px) rotateY(45deg); }
+}
+
+
+
+
