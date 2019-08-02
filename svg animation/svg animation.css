@@ -1,0 +1,211 @@
+svg {
+    position:relative;
+    display:inline-block;
+    align-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.s1 {
+   background-color: #125BA4; 
+    padding: 30px 30% ;
+    height: 600px;
+}
+
+.s2{
+    padding: 10% 35%;
+    background-color: #A2ECDB;
+    overflow: hidden;
+}
+
+#sun{
+   // animation: rotate infinite 3s linear;
+    transform-origin: center;
+    width: 300px;
+    height: 300px;
+}
+
+#cloud1{
+   width: 50%;
+    animation: cloudMove infinite 5s linear both;
+}
+
+#cloud2{
+    animation: cloudMove infinite 9s linear both;
+}
+
+/*man*/
+#Shape {
+   animation: man-size 3s infinite, man-rotate 8s infinite;
+   
+}
+
+#Shape-Copy-1 {
+   animation: man-size 3s infinite, man-rotate 6s infinite;
+}
+
+#Shape-Copy-2 {
+   animation: man-size 1s infinite, man-rotate 4s infinite;
+}
+
+#Shape-Copy-3 {
+   animation: man-size 3s infinite, man-rotate 7s infinite;
+}
+
+#Shape-Copy-4
+{
+   animation: man-size 3s infinite, man-rotate 5s infinite;
+}
+
+#Shape-Copy-5
+{
+   animation: man-size 3s infinite;
+}
+
+#Shape-Copy-6
+{
+   animation: man-size 3s infinite, man-rotate 8s infinite;
+}
+
+#Shape-Copy-7
+{
+   animation: man-size 3s infinite;
+}
+
+
+
+@keyframes cloudMove {
+    from {
+        transform: translateX(-1100px);
+    }
+    to {
+        transform: translateX(1000px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes man-size {
+  0% {
+    transform: scale(1.0);}
+
+  50% {
+     transform: scale(0.0);}
+
+  100% {
+    transform: scale(1.0);} }
+
+
+@keyframes man-rotate {
+    0% { 
+   transform: rotateZ(0);}
+
+  50% {
+   transform: rotateZ(360deg);}
+
+  100% {
+    transform: rotateZ(0);} }
+}
+
+@keyframes man-glow {
+  0% {
+    fill: #1abc9c; }
+
+  50% {
+    fill: #16a085; }
+
+  100% {
+    fill: #1abc9c; } }
+
+/*fish*/
+
+.s3{
+    background-color:#16a085;
+}
+
+.container-wave{z-index:100; width: 100%;}
+.container-fish{z-index:500;}
+.container-wave,
+.container-fish{
+  position:relative;
+  height:0;
+  width:100%;
+  padding-top:0;
+}
+.svg-wave{
+	width:100%;
+	height:300px;
+}
+.waves{
+	stroke:#76d7c4;
+	fill:transparent;
+	stroke-width:1.5;
+	stroke-linecap:square;
+	stroke-linejoin:miter;
+}
+.svg-fish{
+  position:absolute;
+  left:-10px;
+  top: -10px;
+	width:100%;
+	height:100px;
+	fill: #e67e22;
+	stroke: #fff;
+	overflow-x: hidden;
+
+	-webkit-animation:move 10s 1s infinite ease-in-out;
+	-moz-animation:move 10s 1s infinite ease-in-out;
+	-o-animation:move 10s 1s infinite ease-in-out;
+	-ms-animation:move 10s 1s infinite ease-in-out;
+	animation:move 10s 1s infinite ease-in-out;
+	
+	-webkit-transform-origin:center center;
+	-moz-transform-origin:center center;
+	-o-transform-origin:center center;
+	-ms-transform-origin:center center;
+	transform-origin:center center;
+}
+@-webkit-keyframes move {
+	0%{-webkit-transform: translateX(-500px) scale(0.5);}
+	25%{-webkit-transform: translateY(100px) scale(1.2);}
+	50%{-webkit-transform: translateY(100px) scale(1.5);}
+	75%{-webkit-transform: translateY(100px) scale(1.2);}
+	100%{-webkit-transform: translateX(100%) scale(0.5); }
+}
+@-moz-keyframes move {
+	0%{-moz-transform: translateX(-500px) scale(0.5);}
+	25%{-moz-transform: translateY(100px) scale(1.2);}
+	50%{-moz-transform: translateY(100px) scale(1.5);}
+	75%{-moz-transform: translateY(100px) scale(1.2);}
+	100%{-moz-transform: translateX(100%) scale(0.5);}
+}
+@-o-keyframes move {
+	0%{-o-transform: translateX(-500px) scale(0.5);}
+	25%{-o-transform: translateY(100px) scale(1.2);}
+	50%{-o-transform: translateY(100px) scale(1.5);}
+	75%{-o-transform: translateY(100px) scale(1.2);}
+	100%{-o-transform: translateX(100%) scale(0.5);}
+}
+@-ms-keyframes move {
+	0%{-ms-transform: translateX(-500px) scale(0.5);}
+	25%{-ms-transform: translateY(100px) scale(1.2);}
+	50%{-ms-transform: translateY(100px) scale(1.5);}
+	75%{-ms-transform: translateY(100px) scale(1.2);}
+	100%{-ms-transform: translateX(100%) scale(0.5);}
+}
+@keyframes move {
+	0%{transform: translateX(-500px) scale(0.5);}
+	25%{transform: translateY(100px) scale(1.2);}
+	50%{transform: translateY(100px) scale(1.5);}
+	75%{transform: translateY(100px) scale(1.2);}
+	100%{transform: translateX(100%) scale(0.5);}
+}
+
+
